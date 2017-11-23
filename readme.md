@@ -1,4 +1,4 @@
-Git学习记录
+Git学习笔记_1
 ===
 1. ### Git 安装 : [Git for Windows](http://msysgit.github.com/)
 2. ### Git 配置项 : 
@@ -39,23 +39,44 @@ Git学习记录
 		- 执行```$ git add example.md```将文件添加到仓库暂存区(可以使用add . 添加整个文件目录)
 		- 使用```git commit```将文件提交到仓库
 			```
-			$ git commit -m "这里是文件提交说明" //等同于代码注释
+			$ git commit -m "提交文件说明" //等同于代码注释
 			```
 		_命令行```$ git status```查看当前仓库状态,```$ git diff ***```查看仓库文件修改内容_
 		_提交修改文件,同样可以使用:_
 			```
 			$ git add
-			$ git commit
+			$ git commit -m "文件修改说明"
 			```
+6. ### 版本退回```$ git reset```
+	- 在执行版本退回命令时,指定退回版本.在Git中```HEAD```代表当前版本,上一版使用```HEAD^```表示.
+		```
+		$ git reset --hard HEAD^
+		```
+	- 退回版本隔代过多可以使用(如上100版):```HEAD~100```
+	- 退回后,可以通过```$ git reflog```(查询操作记录),找到某一后代版本"commit id",退回到后代版本
+		```
+		git reset --hard 2343224	//hard后面插入commit id
+		```
+	- 在工作区文件遭遇非预期修改后可以使用```git checkout -- filename```将工作区文件退回到暂存区版本or版本库版本
+		①: 文件在被修改前没有add到暂存区--->工作区文件将回到版本库版本
+		②: 文件在被修改前已经add到暂存区--->工作区文件将回到暂存区版本
+		③: **文件在被修改后同时添加到了暂存区,可以使用```$ git reset HEAD filename```(这里的命令行没有--hard)把暂存区修改撤销掉,再checkout**
+	- _文件删除_
+		命令行```$ rm filename```可以删除工作区指定文件.但是版本库内文件不会被删除.此时: 1--->我要同时删除版本库内文件--->执行```$ git rm filename```并```git commit``` || 2--->误操作--->执行```$ git checkout -- filesname```撤销操作.
 
+# Git学习笔记_2
+===
+1. SSH Key创建
+	Git Bash中执行```$ ssh-keygen -t rsa -C "example@mail.com"```
+2. 在github中绑定id_rsa.pub(ssh key公钥)
 
+# Git冷知识积累
 
-### Git冷知识积累
-
-- 提示```too many argument```	将命令行用""包裹后运行.
+- 执行命令行提示```too many argument```时,可以命令行用""包裹后运行.
 - add . & add -A & add -u区别
 	1. git add -A	保存所有的增删改
 	2. git add .	保存新的添加和修改，但是不包括删除
-	3. git add -u	保存修改和删除，但是不包括新建文件。
+	3. git add -u	保存修改和删除，但是不包括新建文件.
 
+- Git提交文件必须先将文件的增删改查添加到仓库暂存区中(```$ git add ***```)后才能通过```$ git commit```提交
 
