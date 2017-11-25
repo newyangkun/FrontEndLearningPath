@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>个人中心</title>
+  <link rel="stylesheet" href="./css/mui.min.css">
+  <link rel="stylesheet" href="./css/font-awesome.min.css">
+  <link rel="stylesheet" href="./css/user.css">
+</head>
+
+<body>
+  <!-- 顶部固定搜索栏 -->
+  <header id="header" class="mui-bar mui-bar-nav">
+    <h1 class="mui-title"><a href="javascript:;">乐淘商城</a></h1>
+    <a class="mui-icon fa fa-search mui-pull-right"></a>
+  </header>
+  <!-- 底部固定导航栏 -->
+  <footer id="footer-nav" class="mui-bar mui-bar-tab">
+    <a class="mui-tab-item mui-active" href="#tabbar">
+      <span class="mui-icon fa fa-home"></span>
+      <span class="mui-tab-label">首页</span>
+    </a>
+    <a class="mui-tab-item" href="#tabbar-with-chat">
+      <span class="mui-icon fa fa-align-justify"></span>
+      <span class="mui-tab-label">分类</span>
+    </a>
+    <a class="mui-tab-item" href="#tabbar-with-contact">
+      <span class="mui-icon fa fa-shopping-cart"></span>
+      <span class="mui-tab-label">购物车</span>
+    </a>
+    <a class="mui-tab-item" href="#tabbar-with-map">
+      <span class="mui-icon fa fa-user"></span>
+      <span class="mui-tab-label">会员中心</span>
+    </a>
+  </footer>
+  <!-- 页面主体内容区域 -->
+
+  <section class="mui-content">
+    <ul class="mui-table-view">
+      <li class="mui-table-view-cell mui-media portrait">
+        <a href="javascript:;" class="">
+          <img class="mui-media-object mui-pull-left" src="./img/user.jpg">
+          <div class="mui-media-body">
+            itcast
+            <p class="mui-ellipsis">绑定手机:150102323243</p>
+          </div>
+        </a>
+      </li>
+      <li class="mui-table-view-cell">
+        <a class="mui-navigate-right">账号与安全</a>
+      </li>
+      <li class="mui-table-view-cell">
+        <a class="mui-navigate-right">我的购物车</a>
+      </li>
+      <li class="mui-table-view-cell">
+        <a class="mui-navigate-right">收货地址管理</a>
+      </li>
+    </ul>
+    <div class="logout-button">
+      <button type="button" class="mui-btn mui-btn-block logout">退出登录</button>
+    </div>
+
+
+  </section>
+
+  <!-- js文件引入 -->
+  <script src="./js/mui.min.js"></script>
+</body>
+
+</html>

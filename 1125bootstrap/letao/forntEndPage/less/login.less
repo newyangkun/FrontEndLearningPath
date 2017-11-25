@@ -1,0 +1,60 @@
+//默认样式清除与重置
+@import url("./reset.less");
+@import url("./normalize.less");
+@import url("./argument.less");
+//页面样式
+/* 重置默认样式 */
+main.mui-content {
+  background-color: #ffffff;
+}
+ul,li {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+img {
+  vertical-align: middle;
+}
+a {
+  text-decoration: none;
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+/* 顶部导航栏样式 */
+#header {
+  background-color: @navbarBgColor;
+  a {
+    color: @navbarFontColor;
+  }
+}
+/* 底部导航栏样式 */
+#footer-nav {
+  background-color: @navbarBgColor;
+  font-size: 14px;
+  a {
+    color: @navbarFontColor;    
+  }
+}
+.mui-bar .mui-icon {
+  font-size: 18px;
+}
+
+//页面主体样式
+/* 输入框字体 */
+main {
+  width: 100%;
+  padding: 0 10px;
+  margin-top: 10px;
+  input::placeholder  {
+    font-size: 16px;
+  }
+  /* 按钮高度 */
+  .mui-btn-block {
+    padding: 5px 0;
+  }
+  .mui-icon-eye:before {
+    content: "\.mui-icon-eye:before";
+  }
+}
