@@ -1,0 +1,126 @@
+/* 清除默认样式部分 */
+ul {
+  list-style: none;
+}
+/* 顶部通栏样式 */
+header.container-fluid {
+  height: 50px;
+  background-color: #018db7;
+}
+header.container-fluid .logout {
+  padding: 15px 14px 0 0;
+}
+header.container-fluid .logout a.classify {
+  color: #ffffff;
+  font-size: 20px;
+}
+a.classifyheader.container-fluid .logout:hover {
+  color: #ada8a3;
+  background-color: transparent;
+}
+.navbar-toggle {
+  display: block;
+}
+.logo {
+  background-color: #127ea3;
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+}
+.logo a {
+  font-weight: 700;
+  font-size: 18px;
+  color: #ffffff;
+}
+/* 侧边导航栏部分 */
+main {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}
+main section {
+  height: 100%;
+}
+main section aside.col-md-2 {
+  height: 100%;
+  padding: 0px;
+  background-color: #223233;
+}
+main ul.navbar-left {
+  width: 100%;
+  padding-left: 0px;
+}
+main ul.navbar-left > li {
+  width: 100%;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+}
+main ul.navbar-left > li a {
+  color: #ada8a3;
+}
+main ul.navbar-left > li:first-child {
+  height: 185px;
+  line-height: 185px;
+}
+main ul.navbar-left > li:first-child img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin: 10px;
+  margin-left: -15px;
+}
+main ul.navbar-left > li:first-child a {
+  color: #ffffff;
+}
+main ul.navbar-left > li.selective {
+  color: #ffffff;
+  background-color: #252427;
+  border-left: 3px solid #018db7;
+}
+main .sort_management {
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  border: 0;
+  border-radius: 0;
+  -webkit-box-shadow: 0;
+          box-shadow: 0;
+  text-align: center;
+  position: relative;
+  top: 0;
+  background-color: #223233;
+}
+.status {
+  display: block;
+}
+/* 页面内容区 */
+article .breadcrumb {
+  margin-top: 20px;
+  height: 36px;
+  line-height: 36px;
+  padding: 0 20px;
+}
+article a.btn {
+  width: 80px;
+  height: 32px;
+  margin: 0;
+  padding: 0;
+  margin-bottom: 15px;
+  line-height: 32px;
+  text-align: center;
+  font-size: 14px;
+}
+article table {
+  text-align: center;
+}
+article table th {
+  text-align: center;
+}
+article .first-row {
+  width: 20%;
+}
+/* 分页符 */
+nav .pagination {
+  float: right;
+}
