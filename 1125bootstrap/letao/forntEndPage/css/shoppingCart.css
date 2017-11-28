@@ -571,12 +571,35 @@ a {
 a:hover {
   text-decoration: none;
 }
-/* 顶部导航栏样式 */
+/* 顶部搜索栏样式 */
 #header {
+  position: relative;
   background-color: #046691;
 }
 #header a {
   color: #ffffff;
+}
+#header .search-box {
+  height: 44px;
+  padding: 8px 40px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+#header .search-bar {
+  width: 100%;
+  height: 30px;
+  margin: 0;
+  padding: 0;
+}
+#header .postion-left {
+  position: absolute;
+  top: 4px;
+  left: 16px;
+}
+#header .postion-right {
+  position: absolute;
+  top: 4px;
+  right: 16px;
 }
 /* 底部导航栏样式 */
 #footer-nav {
@@ -589,43 +612,64 @@ a:hover {
 .mui-bar .mui-icon {
   font-size: 18px;
 }
-/* icon图标 */
+.mui-table-view-chevron .mui-table-view-cell {
+  padding-right: 45px;
+}
+.mui-table-view-chevron .mui-table-view-cell input {
+  position: absolute;
+  left: 30px;
+  bottom: 14px;
+}
+.mui-table-view-chevron .mui-table-view-cell p {
+  line-height: 20px;
+}
+.mui-table-view-chevron .mui-table-view-cell p.goods-attribute {
+  color: #666560;
+}
+.mui-table-view-chevron .mui-table-view-cell p span.current-price {
+  color: #ff3300;
+}
+.mui-table-view .mui-media-object.mui-pull-left {
+  max-width: 52px;
+  height: 52px;
+}
+.goods-attribute {
+  white-space: normal;
+}
 .mui-navigate-right:after,
 .mui-push-right:after {
-  content: "\f105";
-  font-family: FontAwesome;
-  font-size: 18px;
+  right: 28px;
+  content: '\e583';
 }
-/* 背景色 */
-body {
-  height: 100%;
-  background-color: #f0eff3;
+.left-info {
+  float: left;
 }
-/* 内容区域顶部外边距 */
-.mui-content > .mui-table-view:first-child {
-  margin-top: 0;
+.right-info {
+  float: right;
 }
-/* 头像部分样式 */
-li.mui-table-view-cell {
-  line-height: 20px;
-  padding: 10px 15px;
-}
-/* 个人信息部分顶部边框 */
-.mui-table-view:before {
-  display: none;
-}
-/* 信息列表行高 */
-.mui-table-view-cell {
-  padding: 14px 15px;
-}
-/* 登录按钮 */
-.logout-button {
+.order-form {
   width: 100%;
-  padding: 5px 10px;
-  margin-top: 20px;
+  height: 29px;
+  border-top: 1px solid #d0cdc7;
+  position: fixed;
+  bottom: 50px;
+  left: 0;
 }
-.logout-button .logout {
-  padding: 5px 10px;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+.order-form p {
+  width: 130px;
+  height: 29px;
+  line-height: 29px;
+  text-align: center;
+  float: left;
+  font-size: 15px;
+  font-weight: 700;
+  color: #ff3300;
+}
+.order-form .buy {
+  float: right;
+  width: 100px;
+  height: 29px;
+  -webkit-transition: unset;
+  transition: unset;
+  border-radius: 0px;
 }

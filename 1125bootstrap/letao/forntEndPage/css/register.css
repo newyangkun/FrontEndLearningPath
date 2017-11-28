@@ -589,43 +589,43 @@ a:hover {
 .mui-bar .mui-icon {
   font-size: 18px;
 }
-/* icon图标 */
-.mui-navigate-right:after,
-.mui-push-right:after {
-  content: "\f105";
-  font-family: FontAwesome;
-  font-size: 18px;
-}
-/* 背景色 */
-body {
-  height: 100%;
-  background-color: #f0eff3;
-}
-/* 内容区域顶部外边距 */
-.mui-content > .mui-table-view:first-child {
-  margin-top: 0;
-}
-/* 头像部分样式 */
-li.mui-table-view-cell {
-  line-height: 20px;
-  padding: 10px 15px;
-}
-/* 个人信息部分顶部边框 */
-.mui-table-view:before {
-  display: none;
-}
-/* 信息列表行高 */
-.mui-table-view-cell {
-  padding: 14px 15px;
-}
-/* 登录按钮 */
-.logout-button {
+main {
   width: 100%;
-  padding: 5px 10px;
-  margin-top: 20px;
+  padding: 0 10px;
+  margin-top: 10px;
+  /* 按钮高度 */
+  /* 认证码区域调整 */
 }
-.logout-button .logout {
-  padding: 5px 10px;
+main input::-webkit-input-placeholder {
+  font-size: 16px;
+}
+main input:-ms-input-placeholder {
+  font-size: 16px;
+}
+main input::placeholder {
+  font-size: 16px;
+}
+main .mui-btn-block {
+  padding: 5px 0;
+  margin-top: 20px;
+  font-size: 14px;
+}
+main .register-verify {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+main .register-verify .mui-btn-primary {
+  width: 105px;
+  margin-left: 15px;
+  margin-bottom: 15px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+}
+main .register-agree input {
+  vertical-align: bottom;
+}
+.mui-icon-eye:before {
+  content: "\f06e";
+  font-family: FontAwesome;
 }

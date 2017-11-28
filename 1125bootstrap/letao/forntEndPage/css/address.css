@@ -589,43 +589,26 @@ a:hover {
 .mui-bar .mui-icon {
   font-size: 18px;
 }
-/* icon图标 */
-.mui-navigate-right:after,
-.mui-push-right:after {
-  content: "\f105";
-  font-family: FontAwesome;
-  font-size: 18px;
-}
-/* 背景色 */
-body {
+/* 输入框字体 */
+.address-mang {
+  position: absolute;
   height: 100%;
-  background-color: #f0eff3;
 }
-/* 内容区域顶部外边距 */
-.mui-content > .mui-table-view:first-child {
-  margin-top: 0;
-}
-/* 头像部分样式 */
-li.mui-table-view-cell {
-  line-height: 20px;
-  padding: 10px 15px;
-}
-/* 个人信息部分顶部边框 */
-.mui-table-view:before {
-  display: none;
-}
-/* 信息列表行高 */
-.mui-table-view-cell {
-  padding: 14px 15px;
-}
-/* 登录按钮 */
-.logout-button {
+.address-mang a {
+  display: block;
   width: 100%;
-  padding: 5px 10px;
-  margin-top: 20px;
+  height: 32px;
+  line-height: 32px;
+  font-weight: 400;
+  font-size: 14px;
+  background-color: #ffffff;
 }
-.logout-button .logout {
-  padding: 5px 10px;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+.address-mang ul p {
+  line-height: 20px;
+  overflow: visible;
+  white-space: unset;
+  text-overflow: unset;
+}
+.address-mang ul p:first-child {
+  color: #333333;
 }

@@ -5,21 +5,21 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>登录</title>
+  <title>收货地址</title>
   <link rel="stylesheet" href="./css/mui.min.css">
   <link rel="stylesheet" href="./css/font-awesome.min.css">
-  <link rel="stylesheet" href="./css/login.css">
+  <link rel="stylesheet" href="./css/address.css">
 </head>
 
 <body>
   <!-- 顶部固定搜索栏 -->
   <header id="header" class="mui-bar mui-bar-nav">
-    <a class="mui-icon fa fa-arrow-left mui-pull-left"></a>
-    <h1 class="mui-title"><a href="javascript:;">登录</a></h1>
+    <a class="mui-icon fa  fa-arrow-left mui-pull-left"></a>
+    <h1 class="mui-title"><a href="javascript:;">收货地址管理</a></h1>
   </header>
   <!-- 底部固定导航栏 -->
   <footer id="footer-nav" class="mui-bar mui-bar-tab">
-    <a class="mui-tab-item" href="#tabbar">
+    <a class="mui-tab-item mui-active" href="#tabbar">
       <span class="mui-icon fa fa-home"></span>
       <span class="mui-tab-label">首页</span>
     </a>
@@ -36,21 +36,26 @@
       <span class="mui-tab-label">会员中心</span>
     </a>
   </footer>
-
   <!-- 页面主体内容 -->
-  <main class="mui-content">
-    <form action="">
-      <div class="mui-input-row user-name">
-        <input type="text" class="mui-input-clear mui-input" placeholder="用户名/手机号">
-      </div>
-      <div class="mui-input-row mui-password">
-        <input type="password" class="mui-input-password" data-input-password="3" placeholder="密码"><span class="mui-icon mui-icon-eye"></span>
-      </div>
-    </form>
-    <button type="submit" class="mui-btn mui-btn-primary mui-btn-block">登录</button>
-    <a class="mui-btn-link mui-pull-right">免费注册</a>
-  </main>
-  <script src="./js/mui.min.js"></script>
+  <div class="mui-content address-mang">
+    <a href="javascript:;" class="mui-text-center">添加收货地址</a>
+    <ul class="mui-table-view mui-table-view-striped mui-table-view-condensed">
+      <li class="mui-table-view-cell">
+        <div class="mui-table">
+          <div class="mui-table-cell mui-col-xs-11">
+            <p>邮编:<span class="address-id">111121</span>收货人:<span class="user-id">方枪枪</span></p>
+            <p class="mui-h6 mui-ellipsis">山东省青岛市市南区江西路84号青岛远洋船员学院航海系学生公寓4栋516室</p>
+          </div>
+          <div class="mui-table-cell mui-col-xs-1">
+            <span class=""></span>
+          </div>
+        </div>
+      </li>
+    </ul>
+  </div>
+
+
+
 </body>
 
 </html>

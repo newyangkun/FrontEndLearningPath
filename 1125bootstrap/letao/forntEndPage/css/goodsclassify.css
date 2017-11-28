@@ -571,12 +571,35 @@ a {
 a:hover {
   text-decoration: none;
 }
-/* 顶部导航栏样式 */
+/* 顶部搜索栏样式 */
 #header {
+  position: relative;
   background-color: #046691;
 }
 #header a {
   color: #ffffff;
+}
+#header .search-box {
+  height: 44px;
+  padding: 8px 40px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+#header .search-bar {
+  width: 100%;
+  height: 30px;
+  margin: 0;
+  padding: 0;
+}
+#header .postion-left {
+  position: absolute;
+  top: 4px;
+  left: 16px;
+}
+#header .postion-right {
+  position: absolute;
+  top: 4px;
+  right: 16px;
 }
 /* 底部导航栏样式 */
 #footer-nav {
@@ -589,43 +612,46 @@ a:hover {
 .mui-bar .mui-icon {
   font-size: 18px;
 }
-/* icon图标 */
-.mui-navigate-right:after,
-.mui-push-right:after {
-  content: "\f105";
-  font-family: FontAwesome;
-  font-size: 18px;
-}
-/* 背景色 */
-body {
-  height: 100%;
-  background-color: #f0eff3;
-}
-/* 内容区域顶部外边距 */
-.mui-content > .mui-table-view:first-child {
-  margin-top: 0;
-}
-/* 头像部分样式 */
-li.mui-table-view-cell {
-  line-height: 20px;
-  padding: 10px 15px;
-}
-/* 个人信息部分顶部边框 */
-.mui-table-view:before {
-  display: none;
-}
-/* 信息列表行高 */
-.mui-table-view-cell {
-  padding: 14px 15px;
-}
-/* 登录按钮 */
-.logout-button {
+.mui-segmented-control .mui-control-item {
   width: 100%;
-  padding: 5px 10px;
-  margin-top: 20px;
 }
-.logout-button .logout {
-  padding: 5px 10px;
+.side-bar {
+  position: fixed;
+  background-color: #ffffff;
+}
+.mui-segmented-control.mui-segmented-control-inverted .mui-control-item.mui-active {
+  background: 100% 100%;
+  background-color: #cdcac4;
+}
+#segmentedControlContents {
+  float: right;
+}
+.goods-classify {
+  padding-right: 0;
+  background-color: #cdcac4;
+}
+.goods-brand {
+  width: 100%;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  background-color: #ffffff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+.goods-brand li {
+  width: 33.3333%;
+}
+.goods-brand li a {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.goods-brand li img {
+  width: 100%;
+}
+.mui-fullscreen {
+  background-color: #cdcac4;
 }

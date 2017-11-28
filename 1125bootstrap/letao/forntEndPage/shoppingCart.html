@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>购物车</title>
+  <link rel="stylesheet" href="./css/mui.min.css">
+  <link rel="stylesheet" href="./css/font-awesome.min.css">
+  <link rel="stylesheet" href="./css/shoppingCart.css">
+</head>
+
+<body>
+  <!-- 顶部固定搜索栏 -->
+  <header id="header" class="mui-bar mui-bar-nav">
+    <a class="mui-icon fa   fa-arrow-left mui-pull-left"></a>
+    <h1 class="mui-title"><a href="javascript:;">购物车</a></h1>
+    <a class="mui-icon fa  fa-rotate-right mui-pull-right"></a>
+  </header>
+  <!-- 底部固定导航栏 -->
+  <footer id="footer-nav" class="mui-bar mui-bar-tab">
+    <a class="mui-tab-item" href="./index.html">
+      <span class="mui-icon fa fa-home"></span>
+      <span class="mui-tab-label">首页</span>
+    </a>
+    <a class="mui-tab-item" href="./goodsclassify.html">
+      <span class="mui-icon fa fa-align-justify"></span>
+      <span class="mui-tab-label">分类</span>
+    </a>
+    <a class="mui-tab-item active-choose" href="./shoppingCart.html">
+      <span class="mui-icon fa fa-shopping-cart"></span>
+      <span class="mui-tab-label">购物车</span>
+    </a>
+    <a class="mui-tab-item" href="./user.html">
+      <span class="mui-icon fa fa-user"></span>
+      <span class="mui-tab-label">会员中心</span>
+    </a>
+  </footer>
+  <!-- 页面内容区域 -->
+  <main class="shopping-list">
+    <form action="">
+      <ul class="mui-table-view mui-table-view-chevron">
+        <li class="mui-table-view-cell mui-media">
+          <a class="mui-navigate-right">
+            <img class="mui-media-object mui-pull-left" src="./img/detail.jpg">
+            <div class="mui-media-body">
+              <p class="goods-attribute">匡威三星标1970s converse复刻142334c 1444757c三星标黑色高帮</p>
+              <div class="mui-ellipsis">
+                <p class="left-info"><span class="current-price">¥499.1</span><del>¥888.1</del></p>
+                <p class="right-info">x<span>1</span>双</p>
+              </div>
+              <div class="mui-ellipsis">
+                <p>鞋码:<span>50</span></p>
+              </div>
+            </div>
+            <input type="checkbox" name="choose" id="choose-this">
+          </a>
+        </li>
+        <li class="mui-table-view-cell mui-media">
+          <a class="mui-navigate-right">
+            <img class="mui-media-object mui-pull-left" src="./img/detail.jpg">
+            <div class="mui-media-body">
+              <p class="goods-attribute">匡威三星标1970s converse复刻142334c 1444757c三星标黑色高帮</p>
+              <div class="mui-ellipsis">
+                <p class="left-info"><span class="current-price">¥499.1</span><del>¥888.1</del></p>
+                <p class="right-info">x<span>1</span>双</p>
+              </div>
+              <div class="mui-ellipsis">
+                <p>鞋码:<span>50</span></p>
+              </div>
+            </div>
+            <input type="checkbox" name="choose" id="choose-this">
+          </a>
+        </li>
+        <li class="mui-table-view-cell mui-media">
+          <a class="mui-navigate-right">
+            <img class="mui-media-object mui-pull-left" src="./img/detail.jpg">
+            <div class="mui-media-body">
+              <p class="goods-attribute">匡威三星标1970s converse复刻142334c 1444757c三星标黑色高帮</p>
+              <div class="mui-ellipsis">
+                <p class="left-info"><span class="current-price">¥499.1</span><del>¥888.1</del></p>
+                <p class="right-info">x<span>1</span>双</p>
+              </div>
+              <div class="mui-ellipsis">
+                <p>鞋码:<span>50</span></p>
+              </div>
+            </div>
+            <input type="checkbox" name="choose" id="choose-this">
+          </a>
+        </li>
+      </ul>
+    </form>
+    <section class="order-form">
+      <p>订单总额:<span class="good-price">¥0.00</span></p>
+      <button type="submit" class="mui-btn-danger buy">生成订单</button>
+    </section>
+  </main>
+  <!-- js文件引用 -->
+  <script src="./js/mui.min.js"></script>
+  <script src="./js/normalise.js"></script>
+</body>
+
+</html>

@@ -43,20 +43,25 @@ a {
 
 //页面主体样式
 /* 输入框字体 */
-main {
-  width: 100%;
-  padding: 0 10px;
-  margin-top: 10px;
-  input::placeholder  {
-    font-size: 16px;
+.address-mang {
+    position: absolute;
+    height: 100%;
+  a {
+    display: block;
+    width: 100%;
+    height: @titleHeight;
+    line-height: @titleHeight;
+    font-weight: 400;
+    font-size: @normalFontSize;
+    background-color: @navbarFontColor;
   }
-  /* 按钮高度 */
-  .mui-btn-block {
-    padding: 5px 0;
-  }
-  .mui-icon-eye:before {
-    content: "\f06e";
-    font-family: FontAwesome;
-    z-index: 10
+  ul p {
+    line-height: 20px;
+    overflow: visible;
+    white-space: unset;
+    text-overflow: unset;
+    &:first-child {
+      color: @mainFontColor;
+    }
   }
 }
