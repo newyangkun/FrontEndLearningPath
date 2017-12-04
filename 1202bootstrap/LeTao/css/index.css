@@ -1,0 +1,212 @@
+/* 媒体查询微调页面内容左内边距 */
+@media screen and (max-width: 960px) {
+  .page-content-wrapper {
+    margin-left: -15px !important;
+  }
+}
+/* 公共样式 */
+body {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  overflow-x: hidden;
+}
+.container-fluid {
+  padding-right: 0px;
+  padding-left: 0px;
+  height: 100%;
+}
+.nav > li > a {
+  padding: 0;
+}
+.nav .open > a,
+.nav .open > a:focus,
+.nav .open > a:hover {
+  background-color: transparent;
+  border-color: transparent;
+}
+a:focus,
+a:hover {
+  text-decoration: none;
+}
+.selected {
+  color: #ffffff !important;
+}
+.pagination {
+  margin: 0;
+}
+/* 一级分类页面表格样式 */
+.manage-button {
+  padding-bottom: 15px;
+}
+th,
+td {
+  text-align: center;
+}
+/* 一级分类弹出层样式 */
+.popups {
+  width: 296px;
+}
+/* 二级分类弹出层样式 */
+#dLabel {
+  width: 100px;
+  height: 26px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  background-color: #fff;
+}
+.dLabel-classify {
+  margin: 10px 0;
+  background-color: #ccc!important;
+}
+/* 侧边导航栏样式 */
+#sidebar-wrapper {
+  height: 100%;
+  position: relative;
+}
+.nav > li > a {
+  color: #ada8a3;
+}
+.nav > li > a:focus {
+  text-decoration: none;
+  background-color: transparent;
+}
+.nav > li > a:hover {
+  text-decoration: none;
+  background-color: transparent;
+}
+/* 侧边栏宽度调整 */
+.navbar {
+  margin-bottom: 0px;
+  padding-right: 4%;
+  background-color: #ffffff;
+}
+.navbar > .sidebar-nav {
+  margin-left: -15px;
+  margin-right: -15px;
+  height: 100%;
+  background-color: #223233;
+  overflow: hidden;
+}
+.navbar > .sidebar-nav li:nth-child(n+3) > a {
+  display: inline-block;
+  left: 50%;
+  margin: 6px auto 6px -36px;
+}
+.navbar > .sidebar-nav .sidebar-brand {
+  width: 100%;
+  height: 55px;
+  line-height: 55px;
+  text-align: center;
+  background-color: rgba(1, 141, 183, 0.8);
+  font-size: 20px;
+  font-weight: 700;
+}
+.navbar > .sidebar-nav .sidebar-brand a {
+  color: #ffffff;
+}
+.navbar > .sidebar-nav .user-info {
+  width: 100%;
+  height: 116px;
+  padding: 0px;
+  line-height: 116px;
+  text-align: center;
+}
+.navbar > .sidebar-nav .user-info a {
+  text-align: center;
+}
+.navbar > .sidebar-nav .user-info a img {
+  width: 50px;
+  height: auto;
+  border-radius: 50%;
+}
+/* 二级菜单样式 */
+.dropdown-menu {
+  position: relative;
+  width: 100%;
+  border: none;
+  border-radius: none;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  text-align: center;
+  background-color: #223233;
+}
+.dropdown-menu > li > a {
+  width: 100%;
+  display: inline-block;
+  padding-left: 40px;
+  color: #ada8a3;
+}
+/* 小屏头部水平导航栏 */
+.horizontal-nav {
+  width: 100%;
+}
+.horizontal-nav li {
+  height: 20px;
+  line-height: 40px;
+  text-align: center;
+}
+.horizontal-nav li .dropdown-menu {
+  padding: 0;
+  margin: 0;
+  width: 100px;
+  min-width: auto;
+  height: 56px;
+  float: none;
+  background-color: #018db7;
+  position: relative;
+  top: -4px;
+  left: 62px;
+}
+.horizontal-nav li .dropdown-menu a {
+  padding: 0;
+  margin: 0;
+}
+/* 页面内容样式 */
+.page-content {
+  z-index: 10000;
+}
+.page-content-wrapper {
+  margin-left: -5%;
+  margin-right: -15px;
+}
+/* 顶部样式页面动作控件 */
+.top-button {
+  width: 100%;
+  background-color: #018db7;
+}
+.top-button a {
+  padding: 0;
+  margin: 8px auto;
+  position: absolute;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  color: #ffffff;
+}
+.top-button a h1 {
+  margin: 0;
+  padding: 0;
+}
+.top-button div {
+  height: 55px;
+  line-height: 55px;
+  font-size: 18px;
+  color: #ffffff;
+}
+/* 页面内容结构 */
+.main-content {
+  padding: 15px 15px 0px;
+  /* 首页E Charts展示样式 */
+}
+.main-content .chartOne {
+  height: 400px;
+  margin-top: 80px;
+}
+.main-content .chartTwo {
+  height: 400px;
+  margin-top: 80px;
+}
+img {
+  width: 50px;
+}

@@ -1,5 +1,7 @@
 # javascript学习笔记
 
+---
+
 ## 基本概念
 - 数据类型
 	- 五种简单数据类型`Undefined`,`Null`,`Boolean`,`Number`,`String`
@@ -48,4 +50,22 @@
 	- 复制一个引用类型变量,其实是复制该变量指向对象的指针,此时这二个变量因为指针相同,所以指向的对象相同
 - instanceof操作符
 	instanceof用于检测基本类型的值时,始终都会返回false(因为基本类型不是对象);
+
+
+
+
+
+
+
+
+
+---
+
+## javascript捨遗
+
+- $(document).ready() & window.onload
+	- window.onload 必须等到页面包括图片的所有元素加载完毕后才能执行--->多个编写只执行最后一个
+	- $(document).ready() DOM结构绘制完毕后执行,不必等到具体内容加载完毕--->可以多个编写
+		_简介语法: $(function(){});_
+	- window.onload 等同于$(window).load();
 

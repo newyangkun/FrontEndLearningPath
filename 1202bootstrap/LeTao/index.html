@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>categroyFirst</title>
+  <link rel="stylesheet" href="./lib/css/reset.css">
+  <link rel="stylesheet" href="./lib/css/normalize.css">
+  <link rel="stylesheet" href="./lib/bootstrap/bootstrap.min.css">
+  <link rel="stylesheet" href="./css/index.css">
+</head>
+<body>
+  <section class="container-fluid">
+    <!-- 伸缩侧边导航结构 -->
+    <nav class="navbar navbar-inverse navbar-fixed-top col-md-2 hidden-xs hidden-sm" id="sidebar-wrapper" role="navigation">
+      <ul class="nav sidebar-nav">
+        <li class="sidebar-brand">
+          <a href="./index.html">
+           ITCAST
+          </a>
+        </li>
+        <li class="user-info">
+          <a href="#">
+            <img src="./images/default.png" alt="">
+            超级管理员
+          </a>
+        </li>
+        <li class="user-management">
+          <a href="#"><i class="glyphicon glyphicon-user"></i> 用户管理</a>
+        </li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+            <i class="glyphicon glyphicon-th-list"></i> 分类管理 <span class="caret"></span>
+          </a>
+          <ul class="dropdown-menu" role="menu">
+            <li class="first-stage"><a href="#">一级分类</a></li>
+            <li class="second-stage"><a href="#">二级分类</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="#"><i class="glyphicon glyphicon-tag"></i> 商品管理</a>
+        </li>
+      </ul>
+    </nav>
+    <!-- 页面内容样式 -->
+    <section class="page-content col-md-10 col-sm-12">
+      <section class="page-content-wrapper">
+        <!-- 顶部样式页面动作控件 -->
+        <div class="top-button navbar-collapse">
+          <!-- 左侧汉堡按钮 -->
+          <div class="hamburg-button pull-left hidden-xs hidden-sm">
+            <span class="glyphicon glyphicon-menu-hamburger"></span>
+          </div>
+          <!-- 平板与手机上显示logo -->
+          <a class="hidden-lg hidden-md" href="javascript:;"><h1>ITCAST</h1></a>
+          <!-- 右侧登出按钮 -->
+          <div class="logout-button pull-right"  data-toggle="modal" data-target=".logout-confirm">
+            <span class="glyphicon glyphicon-log-out"></span>
+          </div>
+        </div>
+        <!-- 页面内容结构 -->
+        <!-- 小屏显示横向导航栏 -->
+        <div class="horizontal-nav">
+          <nav class="visible-xs visible-sm" role="navigation">
+            <ul class="nav container">
+              <li class="col-sm-4 col-xs-4">
+                <a href="#"><i class="glyphicon glyphicon-user user-management"></i> 用户管理</a>
+              </li>
+              <li class="dropdown col-sm-4 col-xs-4">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                  <i class="glyphicon glyphicon-th-list"></i> 分类管理 <span class="caret"></span>
+                </a>
+                <ul class="dropdown-menu" role="menu">
+                  <li class="first-stage"><a href="#">一级分类</a></li>
+                  <li class="second-stage"><a href="#">二级分类</a></li>
+                </ul>
+              </li>
+              <li class="col-sm-4 col-xs-4">
+                <a href="#"><i class="glyphicon glyphicon-tag"></i> 商品管理</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+        <main class="main-content">
+          <!-- 内容区顶部路径导航 -->
+          <div class="path-nav">
+            <ol class="breadcrumb">
+              <li><a href="./index.html">管理系统</a></li>
+              <li>首页</li>
+            </ol>
+          </div>
+          <!-- 页面内容区域 -->
+          <div class="content">
+            <section class="container-fluid detailed-information">
+              <div class="chartOne col-md-6 .col-sm-12"></div>
+              <div class="chartTwo col-md-6 .col-sm-12"></div>
+            </section>
+          </div>
+        </main>
+      </section>
+      <!-- 退出确认弹框 -->
+      <div class="modal logout-confirm" tabindex="-1">
+        <div class="modal-dialog modal-sm">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal"><span>&times;</span></button>
+              <h4 class="modal-title">温馨提示</h4>
+            </div>
+            <div class="modal-body">
+              <p class="text-danger">您确定要退出后台管理系统吗?</p>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+              <button type="button" class="btn btn-primary">确定</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </section>
+  <!-- js文件引用 -->
+  <script src="./lib/jquery-2.2.2.min.js"></script>
+  <script src="./lib/bootstrap/bootstrap.min.js"></script>
+  <script src="./js/content-template.js"></script>
+  <script src="./lib/template-native.js"></script>
+  <script src="./lib/echarts.min.js"></script>
+  <script src="./js/index.js"></script>
+</body>
+</html>
