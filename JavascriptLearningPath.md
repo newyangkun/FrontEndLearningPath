@@ -51,21 +51,70 @@
 - instanceof操作符
 	instanceof用于检测基本类型的值时,始终都会返回false(因为基本类型不是对象);
 
+## Array
 
+- 数组排序
+	- `reverse()`:返回一个倒序数组
+	- `sort()`:调用`toString()`将数组的每个元素隐式转换为字符串,然后比较(所以'10'会排在'5'之前);然而`sort()`方法可以接受一个函数,用于比较哪个值在前面:
+		```javascript
+		//当sort()方法调用此函数时将会按'严格'的升序排列数组
+		function compare(item1, item2) {
+			if(item1 > item2) {
+				return 1;
+			} else if(item1 < item2) {
+				return -1;
+			} else {
+				return 0;
+			}
+		}
+		```
+- 数组替换
+	- `splice()`方法可以用于: 删除,插入,替换数组元素
+		- 指定二个参数: star, end 将会删除star-end(不包含end下标指向元素)之间的数组元素
+		- 指定三||四个参数: star, length(要删除的长度), newItem;如果length为0,只插入元素;length为有效数值将删掉指定长度的数组元素后插入新的元素
+- 数组迭代方法
+	- every(): 运行一个给定函数(对数组的每一项),只有当数组中每项的值都返回true,才能返回true
+	- some(): 运行一个给定函数(对数组的每一项),只要数组中任意项返回true,将返回true
+	- filter(): 运行一个给定函数(对数组的每一项),返回一个运行结果为true的项目组成的数组
+	- forEach(): 运行一个给定函数(对数组的每一项);没有返回值--->等同于for循环迭代
+	- map(): 运行一个给定函数(对数组的每一项),返回每次函数调用结果组成的数组
 
+## Date
 
+- `getMonth()`返回日期中的月份--->从0开始
+- `getDay()`返回日期中的星期--->从0开始
 
+## RegExp --->未完待续
 
+- 在javascript创建正则表达式
+	```javascript
+	var example = / pattern / flage;
+	// pattern: 正则表达式
+	// flage: 正则表达式行为
+	```
+- 正则表达式行为:
+	- g: 全局模式--->表示正则表达式将会应用于所有字符串(而非在发现第一个匹配项是立即停止)
+	- i: 表示不区分大小写
+	- m: 多行模式
+	- 以上的三种模式可以组合使用:
+		```javascript
+		var pattern = /[a-z]/gi;
+		/* 这里的正则表达式将匹配所有字母开头的字符串,且不区分大小写 */
+		```
+- 元字符
+	- 在javascript中使用正则表达式的元字符**用作其他用途**时,都需要转义.
 
+## Function
+
+- 函数申明与函数表达式的区别: 函数表达式会预解析(函数申明提升),而函数表达式只能等到解析器执行到代码所在行才能被执行--->所以不能在函数表达式前调用该函数
 
 
 ---
-
 ## javascript捨遗
 
 - $(document).ready() & window.onload
 	- window.onload 必须等到页面包括图片的所有元素加载完毕后才能执行--->多个编写只执行最后一个
 	- $(document).ready() DOM结构绘制完毕后执行,不必等到具体内容加载完毕--->可以多个编写
-		_简介语法: $(function(){});_
+		_简洁语法: $(function(){});_
 	- window.onload 等同于$(window).load();
 

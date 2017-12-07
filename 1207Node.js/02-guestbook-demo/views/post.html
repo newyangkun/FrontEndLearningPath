@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>留言本</title>
+  <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css">
+  <style>
+  .main {}
+
+  .main .head {
+    margin-bottom: 25px;
+  }
+  </style>
+</head>
+
+<body>
+  <div class="page-header container">
+    <h1><a href="index.html">留言本</a> <small>发表留言</small></h1>
+  </div>
+  <div class="main container">
+    <div class="rot">
+      <div class="col-md-5">
+        <form action="/post" method="post">
+          <div class="form-group">
+            <label for="exampleInputEmail1">您的大名</label>
+            <input type="text" name="name" class="form-control" id="exampleInputEmail1" placeholder="name">
+          </div>
+          <div class="form-group">
+            <label for="exampleInputFile">留言内容</label>
+            <textarea name="content" class="form-control" rows="5"></textarea>
+          </div>
+          <button type="button" class="btn btn-danger">取消</button>
+          <button type="submit" class="btn btn-success">提交</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
