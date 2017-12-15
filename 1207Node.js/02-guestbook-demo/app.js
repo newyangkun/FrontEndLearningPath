@@ -1,3 +1,6 @@
+/* 构想失败--->重写 */
+
+
 /* 调用模块 */
 const http = require('http');
 const fs = require('fs');
