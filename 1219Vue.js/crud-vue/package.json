@@ -1,0 +1,21 @@
+{
+  "name": "crud-vue",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "dependencies": {
+    "axios": "^0.17.1",
+    "bootstrap": "^3.3.7",
+    "vue": "^2.5.11",
+    "vue-router": "^3.0.1"
+  },
+  "devDependencies": {
+    "json-server": "^0.12.1"
+  },
+  "scripts": {
+    "api": "json-server --watch ./api/db.json"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
