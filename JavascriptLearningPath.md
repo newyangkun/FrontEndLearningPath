@@ -134,8 +134,10 @@
   - $(document).ready() DOM结构绘制完毕后执行,不必等到具体内容加载完毕--->可以多个编写
     _简洁语法: $(function(){});_
   - window.onload 等同于$(window).load();
+
 - forEach()方法对**数组**的每个元素执行一次提供的函数.
   - 提供的回调函数中接收三个参数: `currentValue`, `index`, `array`
+
 - AJAX 
   - get请求得到缓存结果的方法：向URL地址中添加随机字符串（唯一ID）
   ```javascript
@@ -148,3 +150,60 @@
   xmlhttp:setRequestHeader('Content-type', 'application/x-www-form-urlencoded'); 
   xmlhttp:send('key=value$key=value');
   ```
+
+  - ## 跨域
+
+    - 由于浏览器的同源策略, 限制了以下的行为:
+
+      > Cookie, LocalStorage和IndexDB无法获取
+      >
+      > DOM 和 JS 对象无法获取
+      >
+      > Ajax 请求不能发送
+
+    - 跨域即: 域名, 协议, 端口号中任一项不同即视为跨域请求.
+
+    - 跨域的节约方法:
+
+      - Jsonp跨域(只能实现GET请求): 在HTML页面中通过相应的标签从不同域名下加载静态资源文件是被浏览器允许的, 所以我们可以通过动态创建 `script` 标签, 请求一个包含参数的网址实现通讯.
+
+      ```javascript
+      // 原生ajax 实现方式
+      let script = document.createELement('script');
+      script.src = 'http://example.com?username=siyue&callback=callback';
+      document.body.appendChild(script);
+      function callback(response) {
+        console.log(response)
+      }
+      //jQuery 实现方式
+      $.ajax({
+        url: 'http://example.com',
+        type: 'GET',
+        dataType: 'jsonp',
+        jsonpCallback: 'callback',
+        data: {
+          "username": "siyue"
+        }
+      })
+      ```
+
+      - window.name + iframe 跨域 & loaction.hash + iframe 跨域
+
+      - CORS跨域
+
+        CORS需要浏览器 和服务器的同时支持. 同时IE9以下不支持.
+
+        CORS实现关键是服务器, 只要服务器实现了CORS接口, 就可以通过跨域(跨源通信).
+
+        整个CORS通讯过程, 都是浏览器自动完成, 不需要用户参与. 对于开发者来说CORS通讯与同源AJAX通讯没有差别.代码完全一样. 浏览器一旦发现AJAX跨域请求, 就会自动添加一些附加打的头部信息(Origin字段)--->所以实现CORS通讯的关键是服务器端. 只要服务器实现了CORS接口, 就可以跨域通讯.
+
+        ​
+
+  ​
+
+
+
+- 原型链和继承
+  - ECMAScript 6 开始, [Prototype]可以用Object.getPrototypeOf()和Object.setPrototypeOf()访问其来访问Object原型, 等同于非标准的浏览器实现 `__proto__` 
+  - 属性遮蔽(property shadowing).
+  - ​

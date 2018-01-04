@@ -1,6 +1,5 @@
 # HTML&CSS捨遗
 
----
 ## css控制文字溢出省略:
 
   ```html
@@ -52,3 +51,44 @@
 
 - rem(font size of the root element)是一种相对于网页根元素来设置字体大小（区别于em根据父元素的字体大小）
 
+- 在rem布局中设置屏幕旋转, 根元素字体大小不变:
+
+
+  ```html
+  @media screen and (orientation: portrait) {
+    html {
+      font-size: 16px;
+    }
+  }
+  ```
+
+  ​
+
+## HTML5 & CSS3
+
+### 语义化标签
+
+​	html5新增语义化标签, 对SEO 更为友好
+
+```html
+<header></header>
+<nav></nav>
+<section></section>
+<footer></footer>
+```
+
+### 对表单的支持
+
+​	
+
+
+
+
+
+
+
+
+
+## 捨遗
+
+表单上传 文件: `enctype="multipart/form-data"`
